@@ -146,7 +146,7 @@ async function handleStatic(request, response) {
 
   try {
     const data = await readFile(filePath);
-    const contentType = mimeTypes[path.extname(filePath)] ?? "application/octet-stream";
+    const contentType = mimeTypes[path.extname(filePath)] || "application/octet-stream";
     send(response, 200, data, contentType);
   } catch {
     send(response, 404, "Not found");
