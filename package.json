@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "sync": "node sync-to-github.js"
+  }
+}
