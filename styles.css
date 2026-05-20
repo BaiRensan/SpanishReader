@@ -111,8 +111,7 @@ h2 {
   font-size: 20px;
 }
 
-.icon-button,
-.sentence-play {
+.icon-button {
   display: inline-grid;
   place-items: center;
   width: 42px;
@@ -159,8 +158,7 @@ h2 {
 .ghost-button:hover,
 .small-button:hover,
 .icon-pill:hover,
-.icon-button:hover,
-.sentence-play:hover {
+.icon-button:hover {
   border-color: var(--accent);
   color: var(--accent-strong);
 }
@@ -272,21 +270,15 @@ h2 {
   outline: none;
 }
 
-.article-input:focus,
-.english-text:focus {
+.article-input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .control-panel {
-  position: sticky;
-  top: 0;
-  z-index: 20;
   justify-content: space-between;
   gap: 18px;
   padding: 14px 16px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 10px 28px rgba(31, 41, 51, 0.12);
 }
 
 .playback {
@@ -362,44 +354,36 @@ h2 {
 
 .sentences {
   display: grid;
-  gap: 12px;
+  gap: 34px;
 }
 
 .sentence-card {
-  display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) auto;
-  gap: 14px;
-  align-items: start;
-  scroll-margin-top: 120px;
-  border: 1px solid var(--line);
+  display: block;
+  border: 0;
   border-radius: 8px;
-  padding: 14px;
-  background: #fbfcfa;
+  padding: 6px 0;
+  background: transparent;
+  cursor: pointer;
+  scroll-margin-top: 24px;
 }
 
 .sentence-card.reading {
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  background: #f1f8f6;
 }
 
 .spanish-text {
-  margin-bottom: 9px;
-  color: var(--ink);
-  font-size: 18px;
-  line-height: 1.55;
+  margin-bottom: 12px;
+  color: #101828;
+  font-size: 30px;
+  font-weight: 650;
+  line-height: 1.42;
 }
 
 .english-text {
-  width: 100%;
-  min-height: 58px;
-  resize: vertical;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 12px;
-  color: #344054;
-  background: var(--panel);
+  margin: 0;
+  color: #7a828e;
+  font-size: 22px;
   line-height: 1.45;
-  outline: none;
 }
 
 .small-button {
@@ -456,13 +440,12 @@ h2 {
     text-align: left;
   }
 
-  .sentence-card {
-    grid-template-columns: 42px minmax(0, 1fr);
+  .spanish-text {
+    font-size: 26px;
   }
 
-  .translate-one {
-    grid-column: 2;
-    justify-self: start;
+  .english-text {
+    font-size: 20px;
   }
 }
 

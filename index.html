@@ -35,7 +35,6 @@
           <div class="title-bar">
             <input id="articleTitle" class="title-input" type="text" aria-label="文章标题" placeholder="文章标题" />
             <div class="reader-actions">
-              <button class="ghost-button" id="translateAll" type="button">翻译全文</button>
               <button class="primary-button" id="saveArticle" type="button">保存并切句</button>
             </div>
           </div>
@@ -85,13 +84,9 @@
     </div>
 
     <template id="sentenceTemplate">
-      <article class="sentence-card">
-        <button class="sentence-play" type="button" aria-label="朗读这一句" title="朗读这一句">▶</button>
-        <div class="sentence-copy">
-          <p class="spanish-text"></p>
-          <textarea class="english-text" aria-label="英文翻译" placeholder="英文翻译会出现在这里，也可以自己修改"></textarea>
-        </div>
-        <button class="small-button translate-one" type="button">翻译</button>
+      <article class="sentence-card" tabindex="0" role="button" aria-label="朗读这一句">
+        <p class="spanish-text"></p>
+        <p class="english-text"></p>
       </article>
     </template>
 

@@ -25,7 +25,6 @@ const elements = {
   newArticle: document.querySelector("#newArticle"),
   deleteArticle: document.querySelector("#deleteArticle"),
   saveArticle: document.querySelector("#saveArticle"),
-  translateAll: document.querySelector("#translateAll"),
   articleTitle: document.querySelector("#articleTitle"),
   articleText: document.querySelector("#articleText"),
   sentenceList: document.querySelector("#sentenceList"),
@@ -190,16 +189,15 @@ function renderSentences() {
     node.dataset.index = String(index);
     node.querySelector(".spanish-text").textContent = sentence.text;
 
-    const translationField = node.querySelector(".english-text");
-    translationField.value = sentence.translation ?? "";
-    translationField.addEventListener("input", () => {
-      sentence.translation = translationField.value;
-      saveArticles();
-      renderArticleList();
+    const translation = sentence.translation?.trim();
+    node.querySelector(".english-text").textContent = translation || "Translating...";
+    node.addEventListener("click", () => speakSentence(index));
+    node.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        speakSentence(index);
+      }
     });
-
-    node.querySelector(".sentence-play").addEventListener("click", () => speakSentence(index));
-    node.querySelector(".translate-one").addEventListener("click", () => translateSentence(index));
     elements.sentenceList.append(node);
   });
 }
@@ -219,7 +217,7 @@ function persistCurrentInputs() {
   article.text = elements.articleText.value;
 }
 
-function saveCurrentArticle() {
+async function saveCurrentArticle() {
   const article = getActiveArticle();
   if (!article) return;
 
@@ -236,6 +234,7 @@ function saveCurrentArticle() {
 
   setStatus(`已切分为 ${article.sentences.length} 句。`);
   render();
+  await translateMissingSentences();
 }
 
 function setStatus(message) {
@@ -408,33 +407,38 @@ async function translateSentence(index) {
   const sentence = article?.sentences[index];
   if (!sentence) return;
 
-  setStatus(`正在翻译第 ${index + 1} 句...`);
+  setStatus(`正在生成第 ${index + 1} 句英文对照...`);
   try {
     sentence.translation = await translateText(sentence.text);
-    saveArticles();
-    renderSentences();
-    renderArticleList();
-    setStatus(`第 ${index + 1} 句已翻译。`);
+    setStatus(`第 ${index + 1} 句英文对照已生成。`);
   } catch {
-    setStatus("自动翻译暂时不可用，可以先手动填写英文。");
+    sentence.translation = "English translation unavailable.";
+    setStatus("自动英文对照暂时不可用。");
   }
 }
 
-async function translateAllSentences() {
+async function translateMissingSentences() {
   const article = getActiveArticle();
   if (!article?.sentences.length) {
-    setStatus("先保存并切句，再翻译全文。");
     return;
   }
 
-  elements.translateAll.disabled = true;
+  const missingCount = article.sentences.filter((sentence) => !sentence.translation?.trim()).length;
+  if (!missingCount) return;
+
+  elements.saveArticle.disabled = true;
+  setStatus(`正在自动生成 ${missingCount} 句英文对照...`);
   for (let index = 0; index < article.sentences.length; index += 1) {
     if (!article.sentences[index].translation) {
       await translateSentence(index);
+      renderSentences();
     }
   }
-  elements.translateAll.disabled = false;
-  setStatus("全文翻译完成。");
+  elements.saveArticle.disabled = false;
+  saveArticles();
+  renderSentences();
+  renderArticleList();
+  setStatus("英文对照已自动生成。");
 }
 
 elements.toggleLibrary.addEventListener("click", () => {
@@ -476,7 +480,6 @@ elements.deleteArticle.addEventListener("click", () => {
 });
 
 elements.saveArticle.addEventListener("click", saveCurrentArticle);
-elements.translateAll.addEventListener("click", translateAllSentences);
 elements.readArticle.addEventListener("click", speakArticle);
 elements.stopReading.addEventListener("click", () => {
   window.speechSynthesis?.cancel();
@@ -506,4 +509,4 @@ window.addEventListener("beforeunload", () => {
 populateVoiceOptions();
 window.speechSynthesis?.addEventListener?.("voiceschanged", populateVoiceOptions);
 render({ persist: !canUseServerSync });
-loadServerArticles();
+loadServerArticles().then(() => translateMissingSentences());
