@@ -1,0 +1,411 @@
+[
+  {
+    "id": "c273c4a2-4763-4e83-b235-2da25e304615",
+    "title": "03. Sabores en el Mercado",
+    "text": "El fin de semana, Max va al mercado central de Los Ángeles con su amiga Sofía. El mercado es un lugar mágico, lleno de la cultura de América Latina. Hay un mundo de colores y sonidos. Los vendedores gritan en español: \"¡Pase, rey! ¿Qué va a llevar hoy?\". Sofía le dice a Max: \"Aquí compramos la comida porque todo es más fresco y barato que en el supermercado\".\n\nCaminan entre los puestos. Max ve frutas que no conoce. Un hombre le ofrece un pedazo de mango y dice: \"Prueba, amigo, esto es puro azúcar\". Max come la fruta y dice: \"¡Qué rico! Quiero comprar dos kilos de este mango\". Sofía sonríe y habla con la vendedora, una señora mayor con un vestido de flores: \"Hola, madrecita, ¿a cuánto está el kilo?\". La señora responde: \"Para ti, mi reina, está a dos pesos el kilo\".\n\nDespués, van a la parte de la comida preparada. El olor a carne asada y tortillas de maíz está en todo el aire. Sofía pide dos empanadas de carne y Max quiere probar los tacos con mucho picante. Ellos se sientan en una mesa pequeña de madera. Max toma un vaso de agua de horchata, una bebida dulce y fría.\n\nMientras comen, un grupo de mariachis entra al mercado con sus guitarras. Ellos cantan una canción tradicional sobre el amor y la tierra. Toda la gente en el mercado escucha y aplaude. Max siente una gran felicidad en su corazón. Él piensa que la vida aquí tiene mucha fuerza.\n\nSofía le pregunta: \"¿Te gusta la comida de nuestro país, Max?\". Él responde con los ojos llenos de alegría: \"Me encanta. La comida tiene alma, igual que la gente. Ya no me siento un extraño en esta ciudad\". Ellos pagan la cuenta, toman sus bolsas llenas de frutas y salen del mercado bajo el sol de la tarde.",
+    "sentences": [
+      {
+        "text": "El fin de semana, Max va al mercado central de Los Ángeles con su amiga Sofía.",
+        "translation": ""
+      },
+      {
+        "text": "El mercado es un lugar mágico, lleno de la cultura de América Latina.",
+        "translation": ""
+      },
+      {
+        "text": "Hay un mundo de colores y sonidos.",
+        "translation": ""
+      },
+      {
+        "text": "Pase, rey!",
+        "translation": ""
+      },
+      {
+        "text": "Qué va a llevar hoy?",
+        "translation": ""
+      },
+      {
+        "text": "\".",
+        "translation": ""
+      },
+      {
+        "text": "Sofía le dice a Max: \"Aquí compramos la comida porque todo es más fresco y barato que en el supermercado\".",
+        "translation": ""
+      },
+      {
+        "text": "Caminan entre los puestos.",
+        "translation": ""
+      },
+      {
+        "text": "Max ve frutas que no conoce.",
+        "translation": ""
+      },
+      {
+        "text": "Un hombre le ofrece un pedazo de mango y dice: \"Prueba, amigo, esto es puro azúcar\".",
+        "translation": ""
+      },
+      {
+        "text": "Qué rico!",
+        "translation": ""
+      },
+      {
+        "text": "Quiero comprar dos kilos de este mango\".",
+        "translation": ""
+      },
+      {
+        "text": "a cuánto está el kilo?",
+        "translation": ""
+      },
+      {
+        "text": "\".",
+        "translation": ""
+      },
+      {
+        "text": "La señora responde: \"Para ti, mi reina, está a dos pesos el kilo\".",
+        "translation": ""
+      },
+      {
+        "text": "Después, van a la parte de la comida preparada.",
+        "translation": ""
+      },
+      {
+        "text": "El olor a carne asada y tortillas de maíz está en todo el aire.",
+        "translation": ""
+      },
+      {
+        "text": "Sofía pide dos empanadas de carne y Max quiere probar los tacos con mucho picante.",
+        "translation": ""
+      },
+      {
+        "text": "Ellos se sientan en una mesa pequeña de madera.",
+        "translation": ""
+      },
+      {
+        "text": "Max toma un vaso de agua de horchata, una bebida dulce y fría.",
+        "translation": ""
+      },
+      {
+        "text": "Mientras comen, un grupo de mariachis entra al mercado con sus guitarras.",
+        "translation": ""
+      },
+      {
+        "text": "Ellos cantan una canción tradicional sobre el amor y la tierra.",
+        "translation": ""
+      },
+      {
+        "text": "Toda la gente en el mercado escucha y aplaude.",
+        "translation": ""
+      },
+      {
+        "text": "Max siente una gran felicidad en su corazón.",
+        "translation": ""
+      },
+      {
+        "text": "Él piensa que la vida aquí tiene mucha fuerza.",
+        "translation": ""
+      },
+      {
+        "text": "Te gusta la comida de nuestro país, Max?",
+        "translation": ""
+      },
+      {
+        "text": "\".",
+        "translation": ""
+      },
+      {
+        "text": "Él responde con los ojos llenos de alegría: \"Me encanta.",
+        "translation": ""
+      },
+      {
+        "text": "La comida tiene alma, igual que la gente.",
+        "translation": ""
+      },
+      {
+        "text": "Ya no me siento un extraño en esta ciudad\".",
+        "translation": ""
+      },
+      {
+        "text": "Ellos pagan la cuenta, toman sus bolsas llenas de frutas y salen del mercado bajo el sol de la tarde.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": "1d315d98-4c3d-4b6e-943a-2a0dcb7ba1ff",
+    "title": "02. El Tráfico y los Colectivos",
+    "text": "Max tiene que ir a su trabajo nuevo por la mañana. En esta gran ciudad de Los Ángeles, el tráfico es una cosa increíble. Hay muchos carros, autos y motos en las autopistas y en las calles. La gente camina rápido y los vendedores gritan en las esquinas. Max no tiene un carro propio todavía, así que tiene que viajar en colectivo.\n\nEl colectivo es un autobús pequeño y de muchos colores que cruza los barrios latinos. Siempre viene lleno de gente. Hoy, Max sube al colectivo y escucha música salsa que viene de la radio del conductor. El conductor es un señor amable que dice: \"¡Buenos días! Pasen al fondo, por favor, que hay lugar\".\n\nEn el camino, Max ve la vida de la ciudad desde la ventana. El colectivo pasa por un parque grande donde la gente vende frutas tropicales. El aire tiene olor a café fresco. Max mira su reloj; tiene miedo de llegar tarde en su segundo día. Él le pregunta a una mujer que está a su lado: \"¿Señora, este colectivo llega al centro de la ciudad?\".\n\nLa mujer sonríe y le responde: \"Sí, joven, este auto va directo al centro, pero hoy el tráfico está difícil por la marcha en la avenida principal. No te preocupes, siempre llegamos\". En la comunidad latina de Los Ángeles, la gente tiene paciencia con el tráfico.\n\nDespués de media hora, el colectivo llega cerca del edificio del gobierno. Max baja rápido y dice: \"¡Gracias, señor conductor!\". Camina una calle más y ve el gran edificio. Entra a su oficina justo a tiempo. Su jefe lo ve y le dice: \"¡Hola, Max! Qué bueno que llegas bien. El tráfico hoy es una locura, ¿verdad? Bienvenido a tu nueva casa\". Max sonríe, el día empieza con movimiento y calor humano.",
+    "sentences": [
+      {
+        "text": "Max tiene que ir a su trabajo nuevo por la mañana.",
+        "translation": ""
+      },
+      {
+        "text": "En esta gran ciudad de Los Ángeles, el tráfico es una cosa increíble.",
+        "translation": ""
+      },
+      {
+        "text": "Hay muchos carros, autos y motos en las autopistas y en las calles.",
+        "translation": ""
+      },
+      {
+        "text": "La gente camina rápido y los vendedores gritan en las esquinas.",
+        "translation": ""
+      },
+      {
+        "text": "Max no tiene un carro propio todavía, así que tiene que viajar en colectivo.",
+        "translation": ""
+      },
+      {
+        "text": "El colectivo es un autobús pequeño y de muchos colores que cruza los barrios latinos.",
+        "translation": ""
+      },
+      {
+        "text": "Siempre viene lleno de gente.",
+        "translation": ""
+      },
+      {
+        "text": "Hoy, Max sube al colectivo y escucha música salsa que viene de la radio del conductor.",
+        "translation": ""
+      },
+      {
+        "text": "Buenos días!",
+        "translation": ""
+      },
+      {
+        "text": "Pasen al fondo, por favor, que hay lugar\".",
+        "translation": ""
+      },
+      {
+        "text": "En el camino, Max ve la vida de la ciudad desde la ventana.",
+        "translation": ""
+      },
+      {
+        "text": "El colectivo pasa por un parque grande donde la gente vende frutas tropicales.",
+        "translation": ""
+      },
+      {
+        "text": "El aire tiene olor a café fresco.",
+        "translation": ""
+      },
+      {
+        "text": "Max mira su reloj; tiene miedo de llegar tarde en su segundo día.",
+        "translation": ""
+      },
+      {
+        "text": "Señora, este colectivo llega al centro de la ciudad?",
+        "translation": ""
+      },
+      {
+        "text": "\".",
+        "translation": ""
+      },
+      {
+        "text": "La mujer sonríe y le responde: \"Sí, joven, este auto va directo al centro, pero hoy el tráfico está difícil por la marcha en la avenida principal.",
+        "translation": ""
+      },
+      {
+        "text": "No te preocupes, siempre llegamos\".",
+        "translation": ""
+      },
+      {
+        "text": "En la comunidad latina de Los Ángeles, la gente tiene paciencia con el tráfico.",
+        "translation": ""
+      },
+      {
+        "text": "Después de media hora, el colectivo llega cerca del edificio del gobierno.",
+        "translation": ""
+      },
+      {
+        "text": "Gracias, señor conductor!",
+        "translation": ""
+      },
+      {
+        "text": "\".",
+        "translation": ""
+      },
+      {
+        "text": "Camina una calle más y ve el gran edificio.",
+        "translation": ""
+      },
+      {
+        "text": "Entra a su oficina justo a tiempo.",
+        "translation": ""
+      },
+      {
+        "text": "Hola, Max!",
+        "translation": ""
+      },
+      {
+        "text": "Qué bueno que llegas bien.",
+        "translation": ""
+      },
+      {
+        "text": "verdad?",
+        "translation": ""
+      },
+      {
+        "text": "Bienvenido a tu nueva casa\".",
+        "translation": ""
+      },
+      {
+        "text": "Max sonríe, el día empieza con movimiento y calor humano.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": "sample-la-memoria-del-mar",
+    "title": "01. La Vida de Max",
+    "text": "Max es un hombre joven y tiene treinta años. Él es de un país grande y muy bonito. Ahora, Max está en una ciudad nueva, Los Ángeles, porque tiene un trabajo nuevo en el gobierno. Él está feliz, pero la vida en la ciudad no es muy fácil al principio.\n\nTodos los días, Max se levanta cuando el sol está en el cielo de California. Él dice: \"¡Hola, día!\" con una sonrisa. Su casa es pequeña, pero es muy cómoda. En la casa hay un tiempo para todo: un tiempo para comer, un tiempo para hablar con los amigos y un tiempo para pensar sobre la vida.\n\nÉl tiene dos amigos muy buenos. Ellos son Juan y Sofía. Juan y Sofía también son de su país, pero ellos están en esta ciudad desde hace tres años. Ellos tienen más tiempo aquí y conocen bien la parte más bonita de la ciudad.\n\nUn día, Max dice a sus amigos: \"Me gusta mucho estar aquí con ustedes, pero no es fácil todo el tiempo. El trabajo en el gobierno tiene muchas partes difíciles. Yo tengo que hacer muchas cosas en poco tiempo. A veces, no tengo nada de tiempo para mí.\"\n\nJuan le dice: \"Max, la vida es así. Al principio todo es más difícil, pero tú eres un hombre con un gran corazón. El tiempo es el mejor amigo. Después de unos meses, todo va a estar bien, ya lo verás.\"\n\nSofía también habla con él y le dice: \"Sí, Max. Juan tiene razón. Ustedes y yo estamos juntos en esto. Nosotros estamos contigo todos los días. En la vida, lo más importante no es tener mucho dinero o un trabajo en el gobierno, sino estar bien con uno mismo y con las personas que tú quieres. Esta ciudad tiene una vida muy rica.\"\n\nMax piensa sobre las palabras de sus amigos durante la noche. Él está en su cama y no puede dormir bien al principio, pero después de un tiempo, él se siente más tranquilo. Él sabe que ellos tienen razón. Él es joven, tiene salud, tiene amigos y está en un gran país.\n\nAl día siguiente, Max se levanta con más energía. Él va al trabajo por la mañana. En el camino, él ve el sol y la gente de la ciudad. Él se dice a sí mismo: \"Este día va a ser un gran día. Yo puedo hacer esto.\" La vida en la ciudad ya no parece tan difícil porque ahora él sabe que el tiempo y los amigos están de su parte.",
+    "sentences": [
+      {
+        "text": "Max es un hombre joven y tiene treinta años.",
+        "translation": ""
+      },
+      {
+        "text": "Él es de un país grande y muy bonito.",
+        "translation": ""
+      },
+      {
+        "text": "Ahora, Max está en una ciudad nueva, Los Ángeles, porque tiene un trabajo nuevo en el gobierno.",
+        "translation": ""
+      },
+      {
+        "text": "Él está feliz, pero la vida en la ciudad no es muy fácil al principio.",
+        "translation": ""
+      },
+      {
+        "text": "Todos los días, Max se levanta cuando el sol está en el cielo de California.",
+        "translation": ""
+      },
+      {
+        "text": "Hola, día!",
+        "translation": ""
+      },
+      {
+        "text": "\" con una sonrisa.",
+        "translation": ""
+      },
+      {
+        "text": "Su casa es pequeña, pero es muy cómoda.",
+        "translation": ""
+      },
+      {
+        "text": "En la casa hay un tiempo para todo: un tiempo para comer, un tiempo para hablar con los amigos y un tiempo para pensar sobre la vida.",
+        "translation": ""
+      },
+      {
+        "text": "Él tiene dos amigos muy buenos.",
+        "translation": ""
+      },
+      {
+        "text": "Ellos son Juan y Sofía.",
+        "translation": ""
+      },
+      {
+        "text": "Juan y Sofía también son de su país, pero ellos están en esta ciudad desde hace tres años.",
+        "translation": ""
+      },
+      {
+        "text": "Ellos tienen más tiempo aquí y conocen bien la parte más bonita de la ciudad.",
+        "translation": ""
+      },
+      {
+        "text": "Un día, Max dice a sus amigos: \"Me gusta mucho estar aquí con ustedes, pero no es fácil todo el tiempo.",
+        "translation": ""
+      },
+      {
+        "text": "El trabajo en el gobierno tiene muchas partes difíciles.",
+        "translation": ""
+      },
+      {
+        "text": "Yo tengo que hacer muchas cosas en poco tiempo.",
+        "translation": ""
+      },
+      {
+        "text": "A veces, no tengo nada de tiempo para mí.",
+        "translation": ""
+      },
+      {
+        "text": "\" Juan le dice: \"Max, la vida es así.",
+        "translation": ""
+      },
+      {
+        "text": "Al principio todo es más difícil, pero tú eres un hombre con un gran corazón.",
+        "translation": ""
+      },
+      {
+        "text": "El tiempo es el mejor amigo.",
+        "translation": ""
+      },
+      {
+        "text": "Después de unos meses, todo va a estar bien, ya lo verás.",
+        "translation": ""
+      },
+      {
+        "text": "\" Sofía también habla con él y le dice: \"Sí, Max.",
+        "translation": ""
+      },
+      {
+        "text": "Juan tiene razón.",
+        "translation": ""
+      },
+      {
+        "text": "Ustedes y yo estamos juntos en esto.",
+        "translation": ""
+      },
+      {
+        "text": "Nosotros estamos contigo todos los días.",
+        "translation": ""
+      },
+      {
+        "text": "En la vida, lo más importante no es tener mucho dinero o un trabajo en el gobierno, sino estar bien con uno mismo y con las personas que tú quieres.",
+        "translation": ""
+      },
+      {
+        "text": "Esta ciudad tiene una vida muy rica.",
+        "translation": ""
+      },
+      {
+        "text": "\" Max piensa sobre las palabras de sus amigos durante la noche.",
+        "translation": ""
+      },
+      {
+        "text": "Él está en su cama y no puede dormir bien al principio, pero después de un tiempo, él se siente más tranquilo.",
+        "translation": ""
+      },
+      {
+        "text": "Él sabe que ellos tienen razón.",
+        "translation": ""
+      },
+      {
+        "text": "Él es joven, tiene salud, tiene amigos y está en un gran país.",
+        "translation": ""
+      },
+      {
+        "text": "Al día siguiente, Max se levanta con más energía.",
+        "translation": ""
+      },
+      {
+        "text": "Él va al trabajo por la mañana.",
+        "translation": ""
+      },
+      {
+        "text": "En el camino, él ve el sol y la gente de la ciudad.",
+        "translation": ""
+      },
+      {
+        "text": "Él se dice a sí mismo: \"Este día va a ser un gran día.",
+        "translation": ""
+      },
+      {
+        "text": "Yo puedo hacer esto.",
+        "translation": ""
+      },
+      {
+        "text": "\" La vida en la ciudad ya no parece tan difícil porque ahora él sabe que el tiempo y los amigos están de su parte.",
+        "translation": ""
+      }
+    ]
+  }
+]

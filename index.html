@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spanish Reader</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="library" aria-label="文章菜单">
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">Spanish Reader</p>
+            <h1>西语精读</h1>
+          </div>
+          <button class="icon-button" id="toggleLibrary" type="button" aria-label="折叠菜单" title="折叠菜单">
+            <span aria-hidden="true">☰</span>
+          </button>
+        </div>
+
+        <div class="library-actions">
+          <button class="primary-button" id="newArticle" type="button">新文章</button>
+          <button class="ghost-button" id="deleteArticle" type="button">删除</button>
+        </div>
+
+        <details class="article-menu" open>
+          <summary>文章列表</summary>
+          <div class="article-list" id="articleList" role="list"></div>
+        </details>
+      </aside>
+
+      <main class="reader">
+        <section class="editor-panel" aria-label="文章编辑">
+          <div class="title-bar">
+            <input id="articleTitle" class="title-input" type="text" aria-label="文章标题" placeholder="文章标题" />
+            <div class="reader-actions">
+              <button class="ghost-button" id="translateAll" type="button">翻译全文</button>
+              <button class="primary-button" id="saveArticle" type="button">保存并切句</button>
+            </div>
+          </div>
+
+          <textarea
+            id="articleText"
+            class="article-input"
+            placeholder="把西语文章粘贴到这里。保存后会自动切分成句子，并生成逐句学习卡片。"
+            spellcheck="false"
+          ></textarea>
+        </section>
+
+        <section class="control-panel" aria-label="朗读控制">
+          <div class="playback">
+            <button class="icon-pill" id="readArticle" type="button">
+              <span aria-hidden="true">▶</span>
+              全篇朗读
+            </button>
+            <button class="icon-pill" id="stopReading" type="button">
+              <span aria-hidden="true">■</span>
+              停止
+            </button>
+          </div>
+
+          <label class="voice-control" for="voiceSelect">
+            <span>语音</span>
+            <select id="voiceSelect" aria-label="选择西语朗读语音"></select>
+          </label>
+
+          <label class="speed-control" for="speechRate">
+            <span>速度</span>
+            <input id="speechRate" type="range" min="0.5" max="1.5" step="0.05" value="0.9" />
+            <output id="rateValue">0.90x</output>
+          </label>
+
+          <p class="status" id="statusText" role="status">准备好了。</p>
+        </section>
+
+        <section class="sentence-panel" aria-label="句子列表">
+          <div class="section-heading">
+            <h2>逐句学习</h2>
+            <p id="sentenceCount">0 句</p>
+          </div>
+          <div class="sentences" id="sentenceList"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="sentenceTemplate">
+      <article class="sentence-card">
+        <button class="sentence-play" type="button" aria-label="朗读这一句" title="朗读这一句">▶</button>
+        <div class="sentence-copy">
+          <p class="spanish-text"></p>
+          <textarea class="english-text" aria-label="英文翻译" placeholder="英文翻译会出现在这里，也可以自己修改"></textarea>
+        </div>
+        <button class="small-button translate-one" type="button">翻译</button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
