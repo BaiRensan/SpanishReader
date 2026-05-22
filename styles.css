@@ -441,7 +441,7 @@ h2 {
 
 .sentences {
   display: grid;
-  gap: 24px;
+  gap: 20px;
 }
 
 .sentence-card {
