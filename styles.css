@@ -1,18 +1,19 @@
 :root {
   color-scheme: light;
-  --bg: #f6f7f2;
-  --panel: #ffffff;
-  --ink: #1f2933;
-  --muted: #667085;
-  --line: #d8ddd5;
-  --accent: #0f766e;
-  --accent-strong: #0b5e59;
-  --accent-soft: #d9f3ef;
-  --gold: #b7791f;
-  --danger: #b42318;
-  --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
+  --bg: #f5f5f7;
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-solid: #ffffff;
+  --ink: #1d1d1f;
+  --muted: #6e6e73;
+  --line: rgba(60, 60, 67, 0.14);
+  --accent: #007aff;
+  --accent-strong: #0066d6;
+  --accent-soft: rgba(0, 122, 255, 0.14);
+  --accent-wash: #f0f7ff;
+  --danger: #ff3b30;
+  --shadow: 0 18px 42px rgba(0, 0, 0, 0.06);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", Inter, ui-sans-serif, system-ui, "Segoe UI",
     sans-serif;
 }
 
@@ -23,8 +24,11 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(0, 122, 255, 0.08), transparent 32rem),
+    linear-gradient(180deg, #fbfbfd 0%, var(--bg) 34rem);
   color: var(--ink);
+  -webkit-font-smoothing: antialiased;
 }
 
 button,
@@ -51,9 +55,10 @@ button {
   position: sticky;
   top: 0;
   height: 100vh;
-  padding: 24px;
+  padding: 26px 22px;
   border-right: 1px solid var(--line);
-  background: #eef3ed;
+  background: rgba(245, 245, 247, 0.82);
+  backdrop-filter: blur(22px);
   overflow: auto;
   transition: width 180ms ease, padding 180ms ease;
 }
@@ -90,7 +95,7 @@ button {
   margin: 0 0 5px;
   color: var(--accent);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -104,22 +109,26 @@ p {
 h1 {
   margin-bottom: 0;
   font-size: 28px;
+  letter-spacing: 0;
+  line-height: 1.05;
 }
 
 h2 {
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 21px;
+  letter-spacing: 0;
 }
 
 .icon-button {
   display: inline-grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
   color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .library-actions {
@@ -132,26 +141,34 @@ h2 {
 .small-button,
 .icon-pill {
   min-height: 40px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid transparent;
-  padding: 0 14px;
-  font-weight: 700;
+  padding: 0 16px;
+  font-weight: 600;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease,
+    box-shadow 140ms ease;
 }
 
 .primary-button {
   background: var(--accent);
   color: #fff;
+  box-shadow: 0 7px 18px rgba(0, 122, 255, 0.22);
 }
 
 .primary-button:hover {
   background: var(--accent-strong);
+  transform: translateY(-1px);
 }
 
 .ghost-button,
 .small-button,
 .icon-pill {
   border-color: var(--line);
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
 }
 
@@ -160,7 +177,8 @@ h2 {
 .icon-pill:hover,
 .icon-button:hover {
   border-color: var(--accent);
-  color: var(--accent-strong);
+  background: var(--accent-wash);
+  color: var(--accent);
 }
 
 .article-menu {
@@ -171,20 +189,20 @@ h2 {
 .article-menu summary {
   margin-bottom: 12px;
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 650;
   cursor: pointer;
 }
 
 .article-list {
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .article-item {
   width: 100%;
   border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 12px;
+  border-radius: 13px;
+  padding: 13px 14px;
   background: transparent;
   color: var(--ink);
   text-align: left;
@@ -193,7 +211,8 @@ h2 {
 .article-item:hover,
 .article-item.active {
   border-color: var(--accent);
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.045);
 }
 
 .article-item strong {
@@ -207,27 +226,28 @@ h2 {
   display: block;
   margin-top: 5px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .reader {
   display: grid;
-  gap: 18px;
+  gap: 20px;
   align-content: start;
-  padding: 28px;
+  padding: 30px;
 }
 
 .editor-panel,
 .control-panel,
 .sentence-panel {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 18px;
   background: var(--panel);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
 }
 
 .editor-panel {
-  padding: 18px;
+  padding: 20px;
 }
 
 .title-bar {
@@ -243,9 +263,11 @@ h2 {
   border-bottom: 2px solid transparent;
   padding: 8px 2px;
   color: var(--ink);
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
   outline: none;
+  background: transparent;
 }
 
 .title-input:focus {
@@ -263,9 +285,10 @@ h2 {
   min-height: 220px;
   resize: vertical;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 14px;
   padding: 16px;
   color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
   line-height: 1.6;
   outline: none;
 }
@@ -277,18 +300,22 @@ h2 {
 
 .control-panel {
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18px;
-  padding: 14px 16px;
+  padding: 16px 18px;
 }
 
 .playback {
+  flex: 0 0 auto;
   gap: 10px;
 }
 
 .icon-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .speed-control {
@@ -297,25 +324,25 @@ h2 {
   align-items: center;
   gap: 10px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .voice-control {
   display: grid;
-  grid-template-columns: auto minmax(150px, 230px);
+  grid-template-columns: auto minmax(170px, 230px);
   align-items: center;
   gap: 10px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .voice-control select {
   min-width: 0;
   height: 38px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0 34px 0 10px;
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
   outline: none;
 }
@@ -333,12 +360,12 @@ h2 {
   width: 190px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
   text-align: right;
 }
 
 .sentence-panel {
-  padding: 18px;
+  padding: 26px 30px 32px;
 }
 
 .section-heading {
@@ -348,32 +375,40 @@ h2 {
 
 .section-heading p {
   margin-bottom: 0;
-  color: var(--gold);
-  font-weight: 800;
+  color: var(--muted);
+  font-weight: 650;
 }
 
 .sentences {
   display: grid;
-  gap: 34px;
+  gap: 36px;
 }
 
 .sentence-card {
   display: block;
   border: 0;
-  border-radius: 8px;
-  padding: 6px 0;
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-inline: -12px;
   background: transparent;
   cursor: pointer;
   scroll-margin-top: 24px;
+  transition:
+    background-color 140ms ease,
+    transform 140ms ease;
 }
 
 .sentence-card.reading {
-  background: #f1f8f6;
+  background: var(--accent-wash);
+}
+
+.sentence-card:hover {
+  background: rgba(0, 122, 255, 0.06);
 }
 
 .spanish-text {
   margin-bottom: 12px;
-  color: #101828;
+  color: var(--ink);
   font-size: 30px;
   font-weight: 650;
   line-height: 1.42;
@@ -381,7 +416,7 @@ h2 {
 
 .english-text {
   margin: 0;
-  color: #7a828e;
+  color: var(--muted);
   font-size: 22px;
   line-height: 1.45;
 }
@@ -394,10 +429,11 @@ h2 {
 
 .empty-state {
   border: 1px dashed var(--line);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 28px;
   color: var(--muted);
   text-align: center;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 @media (max-width: 900px) {
