@@ -1,5 +1,6 @@
 const storageKey = "spanish-reader-articles-v1";
 const voiceStorageKey = "spanish-reader-voice-v1";
+const themeStorageKey = "spanish-reader-theme-v1";
 const apiArticlesEndpoint = "/api/articles";
 const staticArticlesEndpoint = "articles.json";
 const canUseServerSync =
@@ -20,6 +21,7 @@ const defaultArticles = [
 const elements = {
   appShell: document.querySelector(".app-shell"),
   library: document.querySelector(".library"),
+  themeToggle: document.querySelector("#themeToggle"),
   toggleLibrary: document.querySelector("#toggleLibrary"),
   articleList: document.querySelector("#articleList"),
   newArticle: document.querySelector("#newArticle"),
@@ -42,7 +44,20 @@ let articles = loadArticles();
 let activeArticleId = articles[0]?.id;
 let activeUtterance = null;
 let preferredVoiceName = localStorage.getItem(voiceStorageKey) ?? "";
+let preferredTheme = localStorage.getItem(themeStorageKey) ?? "light";
 let saveTimer = null;
+
+function applyTheme(theme) {
+  preferredTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = preferredTheme;
+  localStorage.setItem(themeStorageKey, preferredTheme);
+
+  const isDark = preferredTheme === "dark";
+  elements.themeToggle?.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
+  elements.themeToggle?.setAttribute("title", isDark ? "切换浅色模式" : "切换深色模式");
+  const icon = elements.themeToggle?.querySelector("span");
+  if (icon) icon.textContent = isDark ? "☀" : "☾";
+}
 
 function loadArticles() {
   const raw = localStorage.getItem(storageKey);
@@ -446,6 +461,10 @@ elements.toggleLibrary.addEventListener("click", () => {
   elements.appShell.classList.toggle("library-collapsed");
 });
 
+elements.themeToggle.addEventListener("click", () => {
+  applyTheme(preferredTheme === "dark" ? "light" : "dark");
+});
+
 elements.newArticle.addEventListener("click", () => {
   persistCurrentInputs();
   const article = {
@@ -506,6 +525,7 @@ window.addEventListener("beforeunload", () => {
   saveArticles();
 });
 
+applyTheme(preferredTheme);
 populateVoiceOptions();
 window.speechSynthesis?.addEventListener?.("voiceschanged", populateVoiceOptions);
 render({ persist: !canUseServerSync });
