@@ -31,6 +31,7 @@ const elements = {
   articleText: document.querySelector("#articleText"),
   sentenceList: document.querySelector("#sentenceList"),
   sentenceCount: document.querySelector("#sentenceCount"),
+  backToTop: document.querySelector("#backToTop"),
   readArticle: document.querySelector("#readArticle"),
   stopReading: document.querySelector("#stopReading"),
   voiceSelect: document.querySelector("#voiceSelect"),
@@ -500,6 +501,9 @@ elements.deleteArticle.addEventListener("click", () => {
 
 elements.saveArticle.addEventListener("click", saveCurrentArticle);
 elements.readArticle.addEventListener("click", speakArticle);
+elements.backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 elements.stopReading.addEventListener("click", () => {
   window.speechSynthesis?.cancel();
   activeUtterance = null;
